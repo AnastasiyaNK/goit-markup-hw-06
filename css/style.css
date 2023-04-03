@@ -103,6 +103,20 @@ body {
 .nav-item {
   position: relative;
 }
+
+.nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--second-text-color);
+  transition: color var(--transition-duration);
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: var(--btn-background-color);
+}
 .studio {
   color: var(--btn-background-color);
 }
@@ -132,20 +146,6 @@ body {
   top: 45px;
   left: 0;
   position: absolute;
-}
-
-.nav-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--second-text-color);
-  transition: color var(--transition-duration);
-}
-.nav-link:hover,
-.nav-link:focus,
-.nav-link:active {
-  color: var(--btn-background-color);
 }
 
 .address {
@@ -728,12 +728,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   justify-content: center;
   align-items: center;
-  transition: background-color var(--transition-duration) fill
-    var(--transition-duration);
-}
-.modal-btn:is(:focus, :hover) {
-  background-color: var(--btn-background-color);
-  fill: var(--btn-text-color);
+  transition: background-color var(--transition-duration);
 }
 
 .modal-x {
@@ -742,7 +737,9 @@ body {
   fill: #2e2f42;
   transition: fill var(--transition-duration);
 }
-.modal-x:is(:focus, :hover) {
+.modal-btn:hover,
+.modal-btn:focus .modal-x {
+  background-color: var(--btn-background-color);
   fill: var(--btn-text-color);
 }
 
